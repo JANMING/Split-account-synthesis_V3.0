@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>（旧）订单分账逻辑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/（旧）订单分账逻辑/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/（旧）订单分账逻辑/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5466" class="ax_default box_1">
+        <div id="u5466_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5467" class="ax_default box_1">
+        <div id="u5467_div" class=""></div>
+        <div id="u5467_text" class="text ">
+          <p><span>START</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5468" class="ax_default box_1">
+        <div id="u5468_div" class=""></div>
+        <div id="u5468_text" class="text ">
+          <p><span>请求支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5469" class="ax_default _连接线">
+        <img id="u5469_seg0" class="img " src="images/（旧）订单分账逻辑/u5469_seg0.png" alt="u5469_seg0"/>
+        <img id="u5469_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5469_seg1"/>
+        <div id="u5469_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5470" class="ax_default flow_shape">
+        <img id="u5470_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5470_text" class="text ">
+          <p><span>是否实时分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5471" class="ax_default _连接线">
+        <img id="u5471_seg0" class="img " src="images/（旧）订单分账逻辑/u5469_seg0.png" alt="u5471_seg0"/>
+        <img id="u5471_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5471_seg1"/>
+        <div id="u5471_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5472" class="ax_default flow_shape">
+        <img id="u5472_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5472_text" class="text ">
+          <p><span>分账方金额之和=订单金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5473" class="ax_default box_1">
+        <div id="u5473_div" class=""></div>
+        <div id="u5473_text" class="text ">
+          <p><span>请求支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5474" class="ax_default _连接线">
+        <img id="u5474_seg0" class="img " src="images/（旧）订单分账逻辑/u5474_seg0.png" alt="u5474_seg0"/>
+        <img id="u5474_seg1" class="img " src="images/（旧）订单分账逻辑/u5474_seg1.png" alt="u5474_seg1"/>
+        <div id="u5474_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5475" class="ax_default box_1">
+        <div id="u5475_div" class=""></div>
+        <div id="u5475_text" class="text ">
+          <p><span>拦截交易，原因：分账金额不准确</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5476" class="ax_default _连接线">
+        <img id="u5476_seg0" class="img " src="images/（旧）订单分账逻辑/u5476_seg0.png" alt="u5476_seg0"/>
+        <img id="u5476_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5476_seg1"/>
+        <div id="u5476_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5477" class="ax_default flow_shape">
+        <img id="u5477_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5477_text" class="text ">
+          <p><span>分账金额是否由商户传来</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5478" class="ax_default box_1">
+        <div id="u5478_div" class=""></div>
+        <div id="u5478_text" class="text ">
+          <p><span>根据汇聚规则单独计算各分账方金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5479" class="ax_default _连接线">
+        <img id="u5479_seg0" class="img " src="images/（旧）订单分账逻辑/u5479_seg0.png" alt="u5479_seg0"/>
+        <img id="u5479_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5479_seg1"/>
+        <div id="u5479_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5480" class="ax_default _连接线">
+        <img id="u5480_seg0" class="img " src="images/（旧）订单分账逻辑/u5474_seg0.png" alt="u5480_seg0"/>
+        <img id="u5480_seg1" class="img " src="images/（旧）订单分账逻辑/u5474_seg1.png" alt="u5480_seg1"/>
+        <div id="u5480_text" class="text ">
+          <p><span>实时分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5481" class="ax_default box_1">
+        <div id="u5481_div" class=""></div>
+        <div id="u5481_text" class="text ">
+          <p><span>得出各分账方分账金额、手续费</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5482" class="ax_default _连接线">
+        <img id="u5482_seg0" class="img " src="images/（旧）订单分账逻辑/u5474_seg0.png" alt="u5482_seg0"/>
+        <img id="u5482_seg1" class="img " src="images/（旧）订单分账逻辑/u5474_seg1.png" alt="u5482_seg1"/>
+        <div id="u5482_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5483" class="ax_default _连接线">
+        <img id="u5483_seg0" class="img " src="images/（旧）订单分账逻辑/u5483_seg0.png" alt="u5483_seg0"/>
+        <img id="u5483_seg1" class="img " src="images/（旧）订单分账逻辑/u5483_seg1.png" alt="u5483_seg1"/>
+        <img id="u5483_seg2" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5483_seg2"/>
+        <div id="u5483_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5484" class="ax_default _连接线">
+        <img id="u5484_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5484_seg0"/>
+        <img id="u5484_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5484_seg1"/>
+        <div id="u5484_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5485" class="ax_default box_1">
+        <div id="u5485_div" class=""></div>
+        <div id="u5485_text" class="text ">
+          <p><span>验证通过后，创建分账订单表，请求支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5486" class="ax_default box_1">
+        <div id="u5486_div" class=""></div>
+        <div id="u5486_text" class="text ">
+          <p><span>异步通知平台商户订单交易成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5487" class="ax_default _连接线">
+        <img id="u5487_seg0" class="img " src="images/（旧）订单分账逻辑/u5487_seg0.png" alt="u5487_seg0"/>
+        <img id="u5487_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5487_seg1"/>
+        <div id="u5487_text" class="text ">
+          <p><span>银行交易返回成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5488" class="ax_default box_1">
+        <div id="u5488_div" class=""></div>
+        <div id="u5488_text" class="text ">
+          <p><span>调起算账中心计算各分账方入账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5489" class="ax_default _连接线">
+        <img id="u5489_seg0" class="img " src="images/（旧）订单分账逻辑/u5489_seg0.png" alt="u5489_seg0"/>
+        <img id="u5489_seg1" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5489_seg1"/>
+        <div id="u5489_text" class="text ">
+          <p><span>延迟分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5490" class="ax_default box_1">
+        <div id="u5490_div" class=""></div>
+        <div id="u5490_text" class="text ">
+          <p><span>验参通过，创建支付订单表，请求银行</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5491" class="ax_default _连接线">
+        <img id="u5491_seg0" class="img " src="images/（旧）订单分账逻辑/u5491_seg0.png" alt="u5491_seg0"/>
+        <img id="u5491_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5491_seg1"/>
+        <div id="u5491_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5492" class="ax_default box_1">
+        <div id="u5492_div" class=""></div>
+        <div id="u5492_text" class="text ">
+          <p><span>异步通知平台交易成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5493" class="ax_default _连接线">
+        <img id="u5493_seg0" class="img " src="images/（旧）订单分账逻辑/u5493_seg0.png" alt="u5493_seg0"/>
+        <img id="u5493_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5493_seg1"/>
+        <div id="u5493_text" class="text ">
+          <p><span>银行交易成功返回</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5494" class="ax_default box_1">
+        <div id="u5494_div" class=""></div>
+        <div id="u5494_text" class="text ">
+          <p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">入账资金进入</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial';font-weight:700;">平台商户在途资金</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5495" class="ax_default _连接线">
+        <img id="u5495_seg0" class="img " src="images/（旧）订单分账逻辑/u5495_seg0.png" alt="u5495_seg0"/>
+        <img id="u5495_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5495_seg1"/>
+        <div id="u5495_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5496" class="ax_default _连接线">
+        <img id="u5496_seg0" class="img " src="images/（旧）订单分账逻辑/u5496_seg0.png" alt="u5496_seg0"/>
+        <img id="u5496_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5496_seg1"/>
+        <div id="u5496_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5497" class="ax_default flow_shape">
+        <img id="u5497_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5497_text" class="text ">
+          <p><span>判断该交易是否为担保交易</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5498" class="ax_default box_1">
+        <div id="u5498_div" class=""></div>
+        <div id="u5498_text" class="text ">
+          <p><span>资金进入在途资金户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5499" class="ax_default _连接线">
+        <img id="u5499_seg0" class="img " src="images/（旧）订单分账逻辑/u5499_seg0.png" alt="u5499_seg0"/>
+        <img id="u5499_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5499_seg1"/>
+        <div id="u5499_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5500" class="ax_default _连接线">
+        <img id="u5500_seg0" class="img " src="images/（旧）订单分账逻辑/u5500_seg0.png" alt="u5500_seg0"/>
+        <img id="u5500_seg1" class="img " src="images/（旧）订单分账逻辑/u5500_seg1.png" alt="u5500_seg1"/>
+        <img id="u5500_seg2" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5500_seg2"/>
+        <div id="u5500_text" class="text ">
+          <p><span>否，只判断风险预存期即可</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5501" class="ax_default box_1">
+        <div id="u5501_div" class=""></div>
+        <div id="u5501_text" class="text ">
+          <p><span>未明确分账信息之前一直停留在途资金户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5502" class="ax_default box_1">
+        <div id="u5502_div" class=""></div>
+        <div id="u5502_text" class="text ">
+          <p><span>接口请求延迟分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5503" class="ax_default box_1">
+        <div id="u5503_div" class=""></div>
+        <div id="u5503_text" class="text ">
+          <p><span>分账金额是否由商户传来</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5504" class="ax_default box_1">
+        <div id="u5504_div" class=""></div>
+        <div id="u5504_text" class="text ">
+          <p><span>根据汇聚规则单独计算各分账方金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5505" class="ax_default box_1">
+        <div id="u5505_div" class=""></div>
+        <div id="u5505_text" class="text ">
+          <p><span>得出各分账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5506" class="ax_default _连接线">
+        <img id="u5506_seg0" class="img " src="images/（旧）订单分账逻辑/u5506_seg0.png" alt="u5506_seg0"/>
+        <img id="u5506_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5506_seg1"/>
+        <div id="u5506_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5507" class="ax_default _连接线">
+        <img id="u5507_seg0" class="img " src="images/（旧）订单分账逻辑/u5507_seg0.png" alt="u5507_seg0"/>
+        <img id="u5507_seg1" class="img " src="images/（旧）订单分账逻辑/u5507_seg1.png" alt="u5507_seg1"/>
+        <img id="u5507_seg2" class="img " src="images/（旧）订单分账逻辑/u5507_seg2.png" alt="u5507_seg2"/>
+        <img id="u5507_seg3" class="img " src="images/（旧）订单分账逻辑/u5507_seg3.png" alt="u5507_seg3"/>
+        <div id="u5507_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5508" class="ax_default _连接线">
+        <img id="u5508_seg0" class="img " src="images/（旧）订单分账逻辑/u5474_seg0.png" alt="u5508_seg0"/>
+        <img id="u5508_seg1" class="img " src="images/（旧）订单分账逻辑/u5474_seg1.png" alt="u5508_seg1"/>
+        <div id="u5508_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5509" class="ax_default _连接线">
+        <img id="u5509_seg0" class="img " src="images/（旧）订单分账逻辑/u5509_seg0.png" alt="u5509_seg0"/>
+        <img id="u5509_seg1" class="img " src="images/（旧）订单分账逻辑/u5509_seg1.png" alt="u5509_seg1"/>
+        <img id="u5509_seg2" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5509_seg2"/>
+        <div id="u5509_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5510" class="ax_default box_1">
+        <div id="u5510_div" class=""></div>
+        <div id="u5510_text" class="text ">
+          <p><span>分账金额之和=订单金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5511" class="ax_default _连接线">
+        <img id="u5511_seg0" class="img " src="images/（旧）订单分账逻辑/u5511_seg0.png" alt="u5511_seg0"/>
+        <img id="u5511_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5511_seg1"/>
+        <div id="u5511_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5512" class="ax_default box_1">
+        <div id="u5512_div" class=""></div>
+        <div id="u5512_text" class="text ">
+          <p><span>拦截交易，原因：分账金额不准确</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5513" class="ax_default _连接线">
+        <img id="u5513_seg0" class="img " src="images/（旧）订单分账逻辑/u5513_seg0.png" alt="u5513_seg0"/>
+        <img id="u5513_seg1" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5513_seg1"/>
+        <div id="u5513_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5514" class="ax_default _连接线">
+        <img id="u5514_seg0" class="img " src="images/（旧）订单分账逻辑/u5514_seg0.png" alt="u5514_seg0"/>
+        <img id="u5514_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5514_seg1"/>
+        <div id="u5514_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5515" class="ax_default _连接线">
+        <img id="u5515_seg0" class="img " src="images/（旧）订单分账逻辑/u5515_seg0.png" alt="u5515_seg0"/>
+        <img id="u5515_seg1" class="img " src="images/（旧）订单分账逻辑/u5515_seg1.png" alt="u5515_seg1"/>
+        <img id="u5515_seg2" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5515_seg2"/>
+        <div id="u5515_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5516" class="ax_default box_1">
+        <div id="u5516_div" class=""></div>
+        <div id="u5516_text" class="text ">
+          <p><span>延迟分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5517" class="ax_default box_1">
+        <div id="u5517_div" class=""></div>
+        <div id="u5517_text" class="text ">
+          <p><span>再次调取交易分账接口</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5518" class="ax_default box_1">
+        <div id="u5518_div" class=""></div>
+        <div id="u5518_text" class="text ">
+          <p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">交易成功，资金入账到</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial';font-weight:700;">在途资金户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5519" class="ax_default _连接线">
+        <img id="u5519_seg0" class="img " src="images/（旧）订单分账逻辑/u5519_seg0.png" alt="u5519_seg0"/>
+        <img id="u5519_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5519_seg1"/>
+        <div id="u5519_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5520" class="ax_default _连接线">
+        <img id="u5520_seg0" class="img " src="images/（旧）订单分账逻辑/u5520_seg0.png" alt="u5520_seg0"/>
+        <img id="u5520_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5520_seg1"/>
+        <div id="u5520_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5521" class="ax_default box_1">
+        <div id="u5521_div" class=""></div>
+        <div id="u5521_text" class="text ">
+          <p><span>实时分账</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5522" class="ax_default box_1">
+        <div id="u5522_div" class=""></div>
+        <div id="u5522_text" class="text ">
+          <p><span>订单交易携带分账信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5523" class="ax_default _连接线">
+        <img id="u5523_seg0" class="img " src="images/（旧）订单分账逻辑/u5523_seg0.png" alt="u5523_seg0"/>
+        <img id="u5523_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5523_seg1"/>
+        <div id="u5523_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5524" class="ax_default _连接线">
+        <img id="u5524_seg0" class="img " src="images/（旧）订单分账逻辑/u5524_seg0.png" alt="u5524_seg0"/>
+        <img id="u5524_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5524_seg1"/>
+        <div id="u5524_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5525" class="ax_default box_1">
+        <div id="u5525_div" class=""></div>
+        <div id="u5525_text" class="text ">
+          <p><span>判断是否为担保交易</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5526" class="ax_default _连接线">
+        <img id="u5526_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5526_seg0"/>
+        <img id="u5526_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5526_seg1"/>
+        <div id="u5526_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5527" class="ax_default box_1">
+        <div id="u5527_div" class=""></div>
+        <div id="u5527_text" class="text ">
+          <p><span>结束</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5528" class="ax_default box_1">
+        <div id="u5528_div" class=""></div>
+        <div id="u5528_text" class="text ">
+          <p><span>开始</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5529" class="ax_default _连接线">
+        <img id="u5529_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5529_seg0"/>
+        <img id="u5529_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5529_seg1"/>
+        <div id="u5529_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5530" class="ax_default _连接线">
+        <img id="u5530_seg0" class="img " src="images/（旧）订单分账逻辑/u5530_seg0.png" alt="u5530_seg0"/>
+        <img id="u5530_seg1" class="img " src="images/（旧）订单分账逻辑/u5530_seg1.png" alt="u5530_seg1"/>
+        <img id="u5530_seg2" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5530_seg2"/>
+        <div id="u5530_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5531" class="ax_default _连接线">
+        <img id="u5531_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5531_seg0"/>
+        <img id="u5531_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5531_seg1"/>
+        <div id="u5531_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5532" class="ax_default box_1">
+        <div id="u5532_div" class=""></div>
+        <div id="u5532_text" class="text ">
+          <p><span>订单分账交易逻辑</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5533" class="ax_default box_1">
+        <div id="u5533_div" class=""></div>
+        <div id="u5533_text" class="text ">
+          <p><span>担保交易</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5534" class="ax_default _连接线">
+        <img id="u5534_seg0" class="img " src="images/（旧）订单分账逻辑/u5534_seg0.png" alt="u5534_seg0"/>
+        <img id="u5534_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5534_seg1"/>
+        <div id="u5534_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5535" class="ax_default box_1">
+        <div id="u5535_div" class=""></div>
+        <div id="u5535_text" class="text ">
+          <p><span>用户确认收货</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5536" class="ax_default _连接线">
+        <img id="u5536_seg0" class="img " src="images/（旧）订单分账逻辑/u5536_seg0.png" alt="u5536_seg0"/>
+        <img id="u5536_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5536_seg1"/>
+        <div id="u5536_text" class="text ">
+          <p><span>调用接口</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5537" class="ax_default flow_shape">
+        <img id="u5537_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5537_text" class="text ">
+          <p><span>判断已担保日期&gt;风险预存期</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5538" class="ax_default _连接线">
+        <img id="u5538_seg0" class="img " src="images/（旧）订单分账逻辑/u5538_seg0.png" alt="u5538_seg0"/>
+        <img id="u5538_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5538_seg1"/>
+        <div id="u5538_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5539" class="ax_default box_1">
+        <div id="u5539_div" class=""></div>
+        <div id="u5539_text" class="text ">
+          <p><span>入账到收款余额，风险预存期过后入账到余额账户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5540" class="ax_default _连接线">
+        <img id="u5540_seg0" class="img " src="images/（旧）订单分账逻辑/u5540_seg0.png" alt="u5540_seg0"/>
+        <img id="u5540_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5540_seg1"/>
+        <div id="u5540_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5541" class="ax_default box_1">
+        <div id="u5541_div" class=""></div>
+        <div id="u5541_text" class="text ">
+          <p><span>直接入账到余额账户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5542" class="ax_default _连接线">
+        <img id="u5542_seg0" class="img " src="images/（旧）订单分账逻辑/u5542_seg0.png" alt="u5542_seg0"/>
+        <img id="u5542_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5542_seg1"/>
+        <div id="u5542_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5543" class="ax_default box_1">
+        <div id="u5543_div" class=""></div>
+        <div id="u5543_text" class="text ">
+          <p><span>结束</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5544" class="ax_default _连接线">
+        <img id="u5544_seg0" class="img " src="images/（旧）订单分账逻辑/u5544_seg0.png" alt="u5544_seg0"/>
+        <img id="u5544_seg1" class="img " src="images/（旧）订单分账逻辑/u5544_seg1.png" alt="u5544_seg1"/>
+        <img id="u5544_seg2" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5544_seg2"/>
+        <div id="u5544_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5545" class="ax_default _连接线">
+        <img id="u5545_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5545_seg0"/>
+        <img id="u5545_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5545_seg1"/>
+        <div id="u5545_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5546" class="ax_default box_1">
+        <div id="u5546_div" class=""></div>
+        <div id="u5546_text" class="text ">
+          <p><span>手续费单独计算，入账金额=分账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5547" class="ax_default flow_shape">
+        <img id="u5547_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5547_text" class="text ">
+          <p><span>平台分账金额是否大于订单手续费</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5548" class="ax_default _连接线">
+        <img id="u5548_seg0" class="img " src="images/（旧）订单分账逻辑/u5548_seg0.png" alt="u5548_seg0"/>
+        <img id="u5548_seg1" class="img " src="images/（旧）订单分账逻辑/u5548_seg1.png" alt="u5548_seg1"/>
+        <div id="u5548_text" class="text ">
+          <p><span>实收模式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5549" class="ax_default box_1">
+        <div id="u5549_div" class=""></div>
+        <div id="u5549_text" class="text ">
+          <p><span>平台入账金额=分账金额-手续费。其他分账方入账金额=分账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5550" class="ax_default _连接线">
+        <img id="u5550_seg0" class="img " src="images/（旧）订单分账逻辑/u5550_seg0.png" alt="u5550_seg0"/>
+        <img id="u5550_seg1" class="img " src="images/（旧）订单分账逻辑/u5550_seg1.png" alt="u5550_seg1"/>
+        <div id="u5550_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5551" class="ax_default _连接线">
+        <img id="u5551_seg0" class="img " src="images/（旧）订单分账逻辑/u5551_seg0.png" alt="u5551_seg0"/>
+        <img id="u5551_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5551_seg1"/>
+        <div id="u5551_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5552" class="ax_default _连接线">
+        <img id="u5552_seg0" class="img " src="images/（旧）订单分账逻辑/u5552_seg0.png" alt="u5552_seg0"/>
+        <img id="u5552_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5552_seg1"/>
+        <div id="u5552_text" class="text ">
+          <p><span>手续费模式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5553" class="ax_default _连接线">
+        <img id="u5553_seg0" class="img " src="images/（旧）订单分账逻辑/u5553_seg0.png" alt="u5553_seg0"/>
+        <img id="u5553_seg1" class="img " src="images/（旧）订单分账逻辑/u5553_seg1.png" alt="u5553_seg1"/>
+        <img id="u5553_seg2" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5553_seg2"/>
+        <div id="u5553_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5554" class="ax_default box_1">
+        <div id="u5554_div" class=""></div>
+        <div id="u5554_text" class="text ">
+          <p><span>入账拦截</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5555" class="ax_default _连接线">
+        <img id="u5555_seg0" class="img " src="images/（旧）订单分账逻辑/u5555_seg0.png" alt="u5555_seg0"/>
+        <img id="u5555_seg1" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5555_seg1"/>
+        <div id="u5555_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u5556" class="ax_default flow_shape">
+        <img id="u5556_img" class="img " src="images/（旧）订单分账逻辑/u5470.png"/>
+        <div id="u5556_text" class="text ">
+          <p><span>平台分账金额是否大于订单手续费</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5557" class="ax_default box_1">
+        <div id="u5557_div" class=""></div>
+        <div id="u5557_text" class="text ">
+          <p><span>平台入账金额=分账金额-手续费。其他分账方入账金额=分账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5558" class="ax_default box_1">
+        <div id="u5558_div" class=""></div>
+        <div id="u5558_text" class="text ">
+          <p><span>调起算账中心计算各分账方入账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5559" class="ax_default _连接线">
+        <img id="u5559_seg0" class="img " src="images/（旧）订单分账逻辑/u5484_seg0.png" alt="u5559_seg0"/>
+        <img id="u5559_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5559_seg1"/>
+        <div id="u5559_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5560" class="ax_default box_1">
+        <div id="u5560_div" class=""></div>
+        <div id="u5560_text" class="text ">
+          <p><span>手续费单独计算，入账金额=分账金额</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5561" class="ax_default _连接线">
+        <img id="u5561_seg0" class="img " src="images/（旧）订单分账逻辑/u5561_seg0.png" alt="u5561_seg0"/>
+        <img id="u5561_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5561_seg1"/>
+        <div id="u5561_text" class="text ">
+          <p><span>手续费模式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5562" class="ax_default _连接线">
+        <img id="u5562_seg0" class="img " src="images/（旧）订单分账逻辑/u5562_seg0.png" alt="u5562_seg0"/>
+        <img id="u5562_seg1" class="img " src="images/（旧）订单分账逻辑/u5562_seg1.png" alt="u5562_seg1"/>
+        <img id="u5562_seg2" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5562_seg2"/>
+        <div id="u5562_text" class="text ">
+          <p><span>实收模式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5563" class="ax_default _连接线">
+        <img id="u5563_seg0" class="img " src="images/（旧）订单分账逻辑/u5563_seg0.png" alt="u5563_seg0"/>
+        <img id="u5563_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5563_seg1"/>
+        <div id="u5563_text" class="text ">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5564" class="ax_default box_1">
+        <div id="u5564_div" class=""></div>
+        <div id="u5564_text" class="text ">
+          <p><span>资金进入在途资金户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5565" class="ax_default _连接线">
+        <img id="u5565_seg0" class="img " src="images/（旧）订单分账逻辑/u5565_seg0.png" alt="u5565_seg0"/>
+        <img id="u5565_seg1" class="img " src="images/（旧）订单分账逻辑/u5469_seg1.png" alt="u5565_seg1"/>
+        <div id="u5565_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5566" class="ax_default _连接线">
+        <img id="u5566_seg0" class="img " src="images/（旧）订单分账逻辑/u5566_seg0.png" alt="u5566_seg0"/>
+        <img id="u5566_seg1" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5566_seg1"/>
+        <div id="u5566_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5567" class="ax_default box_1">
+        <div id="u5567_div" class=""></div>
+        <div id="u5567_text" class="text ">
+          <p><span>拦截交易，原因：分账金额不准确</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5568" class="ax_default _连接线">
+        <img id="u5568_seg0" class="img " src="images/（旧）订单分账逻辑/u5568_seg0.png" alt="u5568_seg0"/>
+        <img id="u5568_seg1" class="img " src="images/（旧）订单分账逻辑/u5483_seg2.png" alt="u5568_seg1"/>
+        <div id="u5568_text" class="text ">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u5569" class="ax_default _连接线">
+        <img id="u5569_seg0" class="img " src="images/（旧）订单分账逻辑/u5569_seg0.png" alt="u5569_seg0"/>
+        <img id="u5569_seg1" class="img " src="images/（旧）订单分账逻辑/u5569_seg1.png" alt="u5569_seg1"/>
+        <img id="u5569_seg2" class="img " src="images/（旧）订单分账逻辑/u5476_seg1.png" alt="u5569_seg2"/>
+        <div id="u5569_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
