@@ -20,6 +20,8 @@
 .link_button {
   color:#169BD5;
 }
+._形状 {
+}
 ._图片_ {
 }
 ._一级标题 {
@@ -149,4 +151,25 @@
   text-align:left;
 }
 .ellipse1 {
+}
+._文本段落1 {
+  text-align:left;
+}
+._二级标题1 {
+  font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight:700;
+  font-style:normal;
+  font-size:24px;
+  text-align:left;
+}
+._形状1 {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:normal;
+  font-style:normal;
+}
+._水平线 {
+}
+._表格 {
+}
+._单元格 {
 }
