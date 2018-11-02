@@ -796,7 +796,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:71px;
+  width:85px;
   height:17px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -811,7 +811,7 @@
   position:absolute;
   left:270px;
   top:123px;
-  width:71px;
+  width:85px;
   height:17px;
 }
 #u425_text {
@@ -819,7 +819,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:71px;
+  width:85px;
   white-space:nowrap;
 }
 #u426 {
@@ -849,7 +849,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:71px;
+  width:85px;
   height:17px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -864,7 +864,7 @@
   position:absolute;
   left:735px;
   top:123px;
-  width:71px;
+  width:85px;
   height:17px;
 }
 #u427_text {
@@ -872,7 +872,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:71px;
+  width:85px;
   white-space:nowrap;
 }
 #u428 {
@@ -2503,8 +2503,8 @@
 #u491 {
   border-width:0px;
   position:absolute;
-  left:500px;
-  top:100px;
+  left:611px;
+  top:96px;
   width:920px;
   height:784px;
   overflow:hidden;
@@ -2725,7 +2725,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:85px;
+  width:99px;
   height:17px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -2738,9 +2738,9 @@
 #u498 {
   border-width:0px;
   position:absolute;
-  left:57px;
+  left:35px;
   top:106px;
-  width:85px;
+  width:99px;
   height:17px;
 }
 #u498_text {
@@ -2748,7 +2748,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:85px;
+  width:99px;
   white-space:nowrap;
 }
 #u499 {
@@ -5762,37 +5762,4 @@
   top:5px;
   width:127px;
   word-wrap:break-word;
-}
-#u607_div {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:57px;
-  height:17px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  color:#0066CC;
-}
-#u607 {
-  border-width:0px;
-  position:absolute;
-  left:1780px;
-  top:308px;
-  width:57px;
-  height:17px;
-  color:#0066CC;
-}
-#u607_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:57px;
-  white-space:nowrap;
 }
